@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Todo App</title>
+</head>
+<body>
+    <header>
+        <h1>Todo List</h1>
+        <input type="text" id="todoList" placeholder="Add Activity..." onkeyup="addActivity(event)" />
+        <button id="addList" onclick="addActivity()">+</button>
+    </header>
+    <div class="parent-container">
+            <div class="left-container">
+                <h2>Pending Tasks</h2>
+                    <ul class="todoUL" id="unorderContactList" ondrop="getCompletedData(event)" ondragover="allowDrop(event)">
+                        <!-- <li class="li-container">
+                            <span class="para">Drink Water</span>
+                            <div class="buttons">
+                                    <button onclick="deleteList(event)">-</button> 
+                                    <button onclick="completeList(event)">Done</button>
+                            </div>
+                        </li> -->
+                    </ul>
+            </div>
+            <div class="right-container">
+                    <h2>Completed Tasks</h2>
+                    <ul class="completedUL" id="completedListUL" ondrop="getNotCompletedData(event)" ondragover="allowDrop(event)">
+                    </ul>
+                </div>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
